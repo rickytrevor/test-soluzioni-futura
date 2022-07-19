@@ -8,12 +8,11 @@ var cors = require('cors')
 
 var con = mysql.createConnection({
   host: "db",
-  user: "test",
-  password: "test",
+  user: process.env.MYSQL_USER,
+  password: process.env.MYSQL_PASSWORD,
   database: "test"
 
 });
-// try connecting to the database, if it fails retry in 5 seconds
 
 con.connect(function(err: any) {
   
@@ -65,12 +64,7 @@ function processing(con: any){
                             console.log("1 record updated");
                         }         
                         );    
-                    
-      
-
         }               
-
-
     })}
  
 
