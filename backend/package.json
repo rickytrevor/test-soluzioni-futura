@@ -20,6 +20,8 @@
   },
   "scripts": {
     "generate": "ts-node generate.ts",
-    "start": "ts-node index.ts"
+    "start": "ts-node index.ts",
+    "develop": "ts-node-dev index.ts"
+
   }
 }
